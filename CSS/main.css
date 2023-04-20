@@ -1,0 +1,660 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://css.gg/search.css");
+@import url("https://css.gg/profile.css");
+@import url("https://css.gg/google.css");
+@import url("https://css.gg/facebook.css");
+@import url("https://css.gg/microsoft.css");
+@import url("https://css.gg/play-button-o.css");
+@import url("https://css.gg/play-pause-o.css");
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/user.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
+
+
+#likebutton{
+  background: transparent !important;
+  border: none;
+  width: 26px;
+  height: 26px;
+  z-index:2;
+  position: absolute;
+  float: right;
+  margin-left: 1.5vw;
+}
+
+#trashbtn{
+  background: transparent !important;
+  border: none;
+  color: white;
+}
+
+#likesuccess{
+  width: 200px;
+  height: 38px;
+  background-color: #a6eeb7;
+  position: fixed;
+  bottom: 70px;
+  right: 0;
+  display: none !important;
+}
+
+#likebutton:hover{
+  background: transparent !important;
+  border: none;
+  width: 26px;
+  height: 26px;
+  z-index:2;
+  position: absolute;
+  float: right;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  transform: scale(1.3);
+  transition: 0.2s ease;
+}
+
+#likebutton:not(:hover){
+  background: transparent !important;
+  border: none;
+  width: 26px;
+  height: 26px;
+  z-index:2;
+  position: absolute;
+  float: right;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  transform: scale(1.0);
+  transition: 0.2s ease;
+}
+
+/* SETTING DARK SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+}
+
+
+/* SETTING BODY DARK THEME FEATURES */
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 22%,
+    rgba(4, 10, 24, 1) 45%,
+    rgba(14, 14, 41, 1) 61%,
+    rgba(23, 18, 56, 1) 71%,
+    rgba(28, 20, 65, 1) 83%,
+    rgba(31, 21, 71, 1) 89%,
+    rgba(47, 28, 98, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+  color: #b4bcca;
+}
+
+
+/* MAIN ELEMENTS IN DARK MODE */
+
+a {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+h4 {
+  cursor: default;
+}
+
+h5 {
+  color: #b4bcca;
+  cursor: default;
+}
+
+h5:hover {
+  color: #fbfbfb;
+  transform: scale(1.03);
+  transition: 0.2s ease;
+  cursor: default;
+}
+
+footer{
+  height: 18vh;
+  margin-top: 5vh;
+}
+
+#btnsearch {
+  background: transparent;
+  border: none;
+}
+
+#search-addon{
+  height: 38px !important;
+}
+
+#search{
+  display: none;
+}
+
+#noresult{
+  display: none;
+}
+
+#librarysearch{
+  display: none;
+}
+
+#usersearch{
+  display: none;
+}
+
+/* NAVBAR FEATURES SETTING */
+
+nav.navbar {
+  background: transparent;
+  height: 9vh;
+}
+
+#searchinput {
+  position: absolute;
+  margin-left: 25vw;
+  display: none;
+}
+
+
+/* USER PAGE MUSIC PLAY */
+
+#playbutton {
+  cursor: pointer;
+  display: block;
+}
+
+#pausebutton {
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+#playlistitems {
+  width: 49vw;
+  height: auto;
+}
+
+#albumtitle {
+  position: absolute;
+  right: 200px;
+}
+
+
+/* BOTTOM FIXED PLAYER */
+
+#player {
+  position: absolute;
+  left: 200px;
+}
+
+#music-player {
+  bottom: 0;
+  left: 0;
+  height: 6vh;
+  background: rgb(237, 53, 43);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 53, 43, 1) 0%,
+    rgba(243, 92, 51, 1) 16%,
+    rgba(244, 115, 52, 1) 55%,
+    rgba(245, 137, 60, 1) 65%,
+    rgba(240, 115, 111, 1) 100%
+  );
+  position: fixed;
+  display: none;
+  z-index:99
+}
+
+#play {
+  display: block;
+  cursor: pointer;
+}
+
+#pause {
+  position: relative;
+  margin-right: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+#backward {
+  cursor: pointer;
+}
+
+#forward {
+  cursor: pointer;
+}
+
+#shuffle {
+  cursor: pointer;
+}
+
+#shuffle.active {
+  cursor: pointer;
+  transform: scale(1.4) rotate(180deg);
+  border-radius: 50%;
+}
+
+#repeat {
+  cursor: pointer;
+}
+
+#repeat.active {
+  cursor: pointer;
+  transform: scale(1.3) rotate(90deg);
+  border-radius: 50%;
+}
+
+
+/* ALBUMCARD & PLAY */
+
+#albumcard {
+  width: 15vw;
+  height: 26vh;
+  border: 1px solid #fbfbfb;
+  background: transparent;
+}
+
+#albumcard:hover {
+  width: 15vw;
+  height: 26vh;
+  border: 1px solid #fbfbfb;
+  background: transparent;
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
+}
+
+#albumcard:not(:hover) {
+  width: 15vw;
+  height: 26vh;
+  border: 1px solid #fbfbfb;
+  background: transparent;
+  transform: scale(1);
+  transition: 0.2s ease-out;
+}
+
+#tracktitle,
+#tracksinger,
+#titleofalbum {
+  width: 15vw;
+  height: auto;
+}
+
+#albumcard img {
+  object-fit: cover;
+  width: 14vw;
+  height: 25vh;
+}
+
+#albumplaybtn {
+  position: absolute;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+#albumpausebtn {
+  position: absolute;
+  width: 36px !important;
+  height: 36px !important;
+  display: none;
+}
+
+#albumpausebtn:hover {
+  position: absolute;
+  width: 36px !important;
+  height: 36px !important;
+  transform: scale(1.3);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+#albumpausebtn:not(:hover) {
+  position: absolute;
+  width: 36px !important;
+  height: 36px !important;
+  transform: scale(1);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+#albumplaybtn:hover {
+  position: absolute;
+  width: 36px !important;
+  height: 36px !important;
+  transform: scale(1.3);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+#albumplaybtn:not(:hover) {
+  position: absolute;
+  width: 36px !important;
+  height: 36px !important;
+  transform: scale(1);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+
+/* PROFILE IMAGE FEATURES SETTING */
+
+#usericon{
+  filter: brightness(0) invert(1) !important;
+}
+
+#searchbuttonicon{
+  filter: brightness(0) invert(1) !important;
+}
+
+#loggedusericon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+#profilephoto {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #fbfbfb;
+}
+
+
+/* SETTING TO BODY LIGHT THEME ALTERNATION FEATURES */
+
+body.alternate {
+  background: rgb(239, 241, 241);
+  background: radial-gradient(
+    circle,
+    rgba(239, 241, 241, 1) 0%,
+    rgba(255, 223, 210, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+  color: #332d2d;
+}
+
+body.alternate::after {
+  content: "";
+  background: rgb(239, 241, 241);
+  background: radial-gradient(
+    circle,
+    rgba(239, 241, 241, 1) 0%,
+    rgba(255, 223, 210, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+  color: #71757e;
+  content: "";
+}
+
+body.alternate h5 {
+  color: #71757e;
+}
+
+body.alternate h5::after {
+  color: #71757e;
+}
+
+body.alternate a {
+  color: #71757e;
+}
+
+body.alternate a::after {
+  color: #71757e;
+}
+
+body.alternate #usericon {
+  filter: brightness(0) invert(0) !important;
+}
+
+body.alternate #usericon::after {
+  filter: brightness(0) invert(0) !important;
+}
+
+body.alternate #searchbuttonicon {
+  filter: brightness(0) invert(0) !important;
+}
+
+body.alternate #searchbuttonicon::after {
+  filter: brightness(0) invert(0) !important;
+}
+
+body.alternate #trashbtn{
+  background: transparent !important;
+  border: none;
+  color: #332d2d;
+}
+
+body.alternate #trashbtn::after{
+  background: transparent !important;
+  border: none;
+  color: #332d2d;
+}
+
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  border: 1px solid #fbfbfb;
+}
+
+body.alternate .btn-primary-outline {
+  background-color: transparent;
+  border-color: #332d2d;
+  border: 1px solid #332d2d;
+}
+
+body.alternate .btn-primary-outline::after {
+  background-color: transparent;
+  border-color: #332d2d;
+  border: 1px solid #332d2d;
+}
+
+.btn-primary-outline:hover {
+  background-color: transparent;
+  border-color: #ccc;
+  border: 1px solid #fbfbfb;
+  transform: scale(1.05);
+  box-shadow: 1px 1px #fbfbfb;
+}
+
+body.alternate span {
+  color: #332d2d;
+}
+
+body.alternate span::after {
+  color: #332d2d;
+}
+
+body.alternate #albumcard {
+  width: 15vw;
+  height: 26vh;
+  border: 1px solid #332d2d;
+  background: transparent;
+}
+
+body.alternate #albumcard::after {
+  width: 15vw;
+  height: 26vh;
+  border: 1px solid #332d2d;
+  background: transparent;
+}
+
+/* SETTING SCROLL TO HAVE A SECTION CSS */
+
+.genre {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 1s ease, transform 0.6s ease;
+}
+
+
+/* SETTING MEDIA QUERY FOR RESPONSIVE */
+
+@media (max-width: 767px) {
+  h5,
+  h3,
+  h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: smaller;
+  }
+  #searchbox {
+    display: none;
+  }
+  #username {
+    display: none;
+  }
+
+  #homelogo {
+    width: 60px !important;
+  }
+  #logo {
+    width: 40px;
+    height: 40px;
+  }
+  #home,
+  #library {
+    padding-inline: 10px !important;
+  }
+
+  #community {
+    padding-right: 10px !important;
+  }
+
+  #album {
+    display: none;
+  }
+  #albumtitle {
+    display: none;
+  }
+  #profilephoto {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #fbfbfb;
+  }
+  #profileuserlastname {
+    display: none;
+  }
+  #volume-bar {
+    display: none;
+  }
+  #play {
+    display: block;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+  }
+
+  #pause {
+    position: relative;
+    margin-right: 24px;
+    display: none;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+  }
+
+  #backward {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+  }
+
+  #forward {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+  }
+
+  #shuffle {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+  }
+
+  #shuffle.active {
+    cursor: pointer;
+    transform: scale(1.4) rotate(180deg);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+
+  #repeat {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+  }
+
+  #repeat.active {
+    cursor: pointer;
+    transform: scale(1.3) rotate(90deg);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+
+  #albumcard {
+    width: 60px !important;
+    height: 40px !important;
+    border: 1px solid #fbfbfb;
+    background: transparent;
+  }
+
+  #albumplaybtn {
+    position: absolute;
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  #albumpausebtn {
+    position: absolute;
+    width: 24px !important;
+    height: 24px !important;
+    display: none;
+  }
+
+  #tracktitle,
+  #tracksinger,
+  #titleofalbum {
+    width: 35px;
+    height: auto;
+  }
+  #homelogo {
+    display: none;
+  }
+
+  #searchbutton {
+    padding: 0 !important;
+  }
+
+  #titleofalbum{
+    display: none;
+  }
+}
+
+#totop {
+  position: fixed;
+  right: -100px;
+  bottom: 60px;
+  cursor: pointer;
+}
+
+#totop.active {
+  transition-duration: 0.5s;
+  right: 10px;
+}
